@@ -1,0 +1,116 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{resume}[2024/04/13 Resume template]
+%-------------------------
+% Custom commands
+
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[empty]{fullpage}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+% Ensure that generate pdf is machine readable/ATS parsable (for pdfTeX only, not XeTeX or LuaTeX)
+\pdfgentounicode=1
+\urlstyle{same}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4.08003pt}
+
+\raggedbottom{}
+\raggedright{}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-.7in}
+\addtolength{\evensidemargin}{-.6in}
+\addtolength{\textwidth}{1.3in}
+\addtolength{\topmargin}{-.6in}
+% \addtolength{\bottommargin}{-.6in}
+\addtolength{\textheight}{1.0in}
+
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{\vspace{-3pt}\scshape\raggedright\large}{}{0em}{}
+  [\color{black}\titlerule\vspace{-1pt plus 2pt minus 4pt}]
+\titlespacing{\section}{0pt}{-3pt}{6pt}
+
+% 1st-level itemize: resumeSubHeadingList, alphabetList, arabicList, bulletedList, simpleList
+\setlist[itemize]{itemsep=-4pt}
+\setlist[enumerate]{itemsep=-4pt}
+% 2nd-level itemize: resumeItemList
+\setlist[itemize,2]{before=\vspace{-7pt}, after=\vspace{-3pt}, itemsep=0pt}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.1in, label=, itemsep=-5pt, before=]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\arabicListStart}{\begin{enumerate}[label={\textbf{[\arabic*]}}]}
+\newcommand{\arabicListEnd}{\end{enumerate}}
+\newcommand{\alphabetListStart}{\begin{enumerate}[label={\textbf{[\alph*]}}]}
+\newcommand{\alphabetListEnd}{\end{enumerate}}
+\newcommand{\bulletedListStart}[1][0.3in]{\begin{itemize}[leftmargin=#1]}
+\newcommand{\bulletedListEnd}{\end{itemize}}
+\newcommand{\simpleListStart}[1][0.15in]{\begin{itemize}[leftmargin=#1, label={}]}
+\newcommand{\simpleListEnd}{\end{itemize}}
+
+
+\newcommand{\resumeSubheading}[4]{
+  % \vspace{-2pt}
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}
+    % \vspace{-7pt}
+}
+
+% by cwhsu with 5 arguments, 3 on the first line, 2 on the second line
+\newcommand{\resumeSubheadingII}[5]{
+  % \vspace{-2pt}
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{ll@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small#5} & #2 \\
+      \textit{\small#3} & \textit{} & \textit{\small#4} \\
+    \end{tabular*}
+    % \vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingIII}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small{#2} \\
+    \end{tabular*}
+    % \vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}
+    % \vspace{-7pt}
+}
+
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\titledItem}[2]{\item\small{\textbf{#1}: #2}}
+\newcommand{\simpleItem}[1]{\item\small{#1}}
+
+
+%-------------------------------------------

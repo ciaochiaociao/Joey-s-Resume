@@ -8,132 +8,18 @@
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
-
-\titlespacing*{\section}{0pt}{12pt plus 4pt minus 2pt}{6pt}
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-% by cwhsu
-\newcommand{\resumeSubheadingII}[5]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{ll@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textit{\small#5} & #2 \\
-      \textit{\small#3} & \textit{} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.1in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-% by cwhsu
-\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-\newcommand{\titledItem}[2]{
-  \item\small{
-    {\textbf{#1}: #2 \vspace{-9pt}}
-  }
-}
-\newcommand{\simpleListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\simpleListEnd}{\end{itemize}\vspace{-5pt}}
-
-\newcommand{\arabicListStart}{\begin{enumerate}[label={\textbf{[\arabic*]}}]}
-\newcommand{\arabicListEnd}{\end{enumerate}\vspace{-5pt}}
-
-\newcommand{\alphabetListStart}{\begin{enumerate}[label={\textbf{[\alph*]}}]}
-\newcommand{\alphabetListEnd}{\end{enumerate}\vspace{-5pt}}
-
-\newcommand{\bulletedListStart}{\begin{itemize}[]}
-\newcommand{\bulletedListEnd}{\end{itemize}\vspace{-5pt}}
-\newcommand{\simpleItem}[1]{
-  \item\small{
-    {#1 \vspace{-9pt}}
-  }
-}
-%-------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage{phonenumbers}
+\usepackage{fontawesome5}
+\usepackage{resume}
+\input{glyphtounicode}  % chktex 27
 
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -146,97 +32,42 @@
 %   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
 % \end{tabular*}
 
-\begin{center}
-    \textbf{\Huge \scshape Chiao--Wei Hsu} \\ \vspace{1pt}
-    \small +1-6317108463 $|$ \href{mailto:Chiao-WeiHsu2025@u.northwestern.edu}{\underline{Chiao-WeiHsu2025@u.northwestern.edu}} $|$ 
-    \href{https://linkedin.com/in/chiao-wei-hsu}{\underline{linkedin.com/in/chiao-wei-hsu}}
-\end{center}
+  \input{sections/title.tex}
 
 
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Northwestern University}{Evanston, IL}
-      {Master of Science in Computer Science}{Sep. 2023 -- Now}
-      \resumeItemListStart
-        \resumeItem{ML \& Intro to AI}
-        \resumeItem{Scalable Software Architecture:}{Built VirtualChef, a Serverless Application that recommends recipes by using Express, NodeJS, AWS Lambda and API Gateway}
-        \resumeItem{Computational Optics:}{ Color Constancy, In-Pixel / On-Sensor Computation, Coded Aperture, Lensless Imaging}
-        \resumeItem{Programming Languages:}{Building from scratch an Interpreter by Racket (Lisp-like language)}
-        \resumeItemListEnd
-    \resumeSubheadingII
-      {National Taiwan University \& Ghent University}{Taiwan and Belgium}
-      {Dual Degree of Master of Science in Photonics \& Optoelectronics}{Sep. 2012 -- Jun 2015}{GPA: 4.23/4.3}
-      \resumeItemListStart
-        \resumeItem{2015 member of Phi Tau Phi Scholastic Honor Society of the Republic of China.}
-        \resumeItem{Made the first place (1/107) in the second semester of 2012 and published a paper in one top conference \ref{pub:sid}.}
-        \resumeItem {Graduate assistantship winner and winner of two scholarships sponsored by Innolux\textsuperscript{®} Corporation.}
-      \resumeItemListEnd
-    \resumeSubheadingII
-      {National Cheng Kung University}{Taiwan}{Bachelor of Engineering in Electro--Optical Engineering}{Sep. 2008 -- Jun. 2012}{GPA: 3.78/4.0}
-      \resumeItemListStart
-        \resumeItem{Distinguished Achievement Award in the Physics Contest (within top 10\%).}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+  %-----------EDUCATION-----------
+  \section{Education}
+    \resumeSubHeadingListStart{}
+      \input{sections/edu1-nu.tex}
+      \input{sections/edu2-csu.tex}
+    \resumeSubHeadingListEnd{}
 
 
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
+  %-----------EXPERIENCE-----------
+  \section{Experience}
+    \resumeSubHeadingListStart{}
+      \input{sections/exp1-ml.tex}
+      \input{sections/exp2-luye-goatai.tex}
+    \resumeSubHeadingListEnd{}
 
-    \resumeSubheading
-      {Research Assistant (Natural Language Processing)}{Oct 2018 -- Dec 2022}
-      {Academia Sinica}{Taiwan}
-      \resumeItemListStart
-        \resumeItem{Improved the state-of-the-art performance by 4\% on NER task to address the challenging generalization problem by utilizing Transformers to incorporate redundant NER predictions from the Internet to recover NER errors \ref{pub:recovery}\ref{pub:globalner}}
-        \resumeItem{Co-authored a paper \ref{pub:qa} and developed a WikiData-based Question Answering system based on rule-based and Transformers and ensembled models by AdaBoost with an accuracy of 93\%.}
-        \resumeItem{Developed \href{https://pypi.org/project/ner-error-analysis/}{\underline{ner-error-analysis}}, an NLP and NER pip library, especially for error analysis, with 10K+ lines of code and design patterns}
-        \resumeItem{Developed a library for visualizing 2D attention for Transformer-like networks}
-        \resumeItem{Implemented an Event Extraction and a Co-Reference Resolution module}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+  %-----------PROJECTS-------------
+  \section{Projects}
+    \resumeSubHeadingListStart{}
+      \input{sections/proj1-savor.tex}
+      \input{sections/proj2-virtualchef.tex}
+      \input{sections/proj3-shop.tex}
+    \resumeSubHeadingListEnd{}
 
-\section{Related Courses and Knowledge}
- \simpleListStart
-    \titledItem{ML and DL}{Llama2, FinGPT, Transformers, LSTM, RNN, CNN, CRF, HMM, SVM, Logistic Regression, Multi-task learning, Curriculum Learning, Ensembling, Clustering, Data and Model Parallelism}
-    \titledItem{Basic Courses}{Operating Systems, Networking, Discrete Mathematics, NAND2Tetris: Build a Computer From Scratch}
- \simpleListEnd
+  %-----------SKILLS---------------
+  \section{Skills and Knowledge}
+    \input{sections/skills.tex}
 
- \section{Other Projects}
-    \simpleListStart
-        \titledItem{Mandarin Community of AI}{Found and manage \href{https://www.facebook.com/groups/demoai}{\underline{a Facebook group}} of 10.1k members since Feb 2023}
-        \titledItem{Numerical Simulation of Nonlinear Dynamics}{Conducted numerical simulations using FORTRAN for the partial differential equations in the nonlinear dynamics of lasers, targeting applications in optical communication}
-    \simpleListEnd
+  %-----------PUBLICATION----------
+  \section{Publications}
+    \input{sections/pub.tex}
 
-%-------------------------------------------
-
-
-%-----------PUBLICATIONS-----------
-\section{Publications}
-    \arabicListStart
-      \simpleItem
-          {Hsu et al., \textit{"A Redundancy-Enhanced Framework For Error Correction in Named Entity Recognition"} \textbf{submitted} ACL '24}\label{pub:recovery}
-      \simpleItem
-          {Hsu et al., \textit{"GlobalNER: Incorporating Non-local Information into Named Entity Recognition."} pre-print '23}\label{pub:globalner}
-      \simpleItem
-          {Liang et al., \textit{"A Flexible and Extensible Framework for Multiple Answer Modes Question Answering."} ROCLING '21}\label{pub:qa}
-      \simpleItem
-          {Hsu et al., \textit{"An Autostereoscopic Display Structure Based on Diffractive Optical Elements and Tunable Refractive Elements."} SID '14}\label{pub:sid}
-
-    \arabicListEnd
-
-\section{Honors}
-    \bulletedListStart
-      \simpleItem
-        {First Place in the 2020 Formosa Artificial Intelligence Grand Challenge with Multi-Round Dialogue System and Question and Answering System using Divide-and-Conquer and Knowledge Base}
-      \simpleItem
-        {Outstanding Social Youth of 2017 in Chiayi City}
-      \simpleItem
-         {2015 member of Phi Tau Phi Scholastic Honor Society of Republic of China (R.O.C.)}
-      \simpleItem
-         {Silver Award in Global Startup Weekend 2015, Silver Award in Sanmen Startup Competition 2016, 2nd Place in PitchCamp with a business of upcycling C2C platform and organizing consultancy we founded since 2016. It has now grown to a level of 30 employees and three offices in Taiwan since 2016}
-    \bulletedListEnd
-    
+  %-----------HONORS---------------
+  \section{Honors}
+    \input{sections/honors.tex}
 
 \end{document}
