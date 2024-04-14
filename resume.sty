@@ -56,13 +56,13 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.1in, label=, itemsep=-5pt, before=]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}[1]{\begin{itemize}[#1]}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 \newcommand{\arabicListStart}{\begin{enumerate}[label={\textbf{[\arabic*]}}]}
 \newcommand{\arabicListEnd}{\end{enumerate}}
 \newcommand{\alphabetListStart}{\begin{enumerate}[label={\textbf{[\alph*]}}]}
 \newcommand{\alphabetListEnd}{\end{enumerate}}
-\newcommand{\bulletedListStart}[1][0.3in]{\begin{itemize}[leftmargin=#1]}
+\newcommand{\bulletedListStart}[1][0.3in]{\begin{itemize}[#1]}
 \newcommand{\bulletedListEnd}{\end{itemize}}
 \newcommand{\simpleListStart}[1][0.15in]{\begin{itemize}[leftmargin=#1, label={}]}
 \newcommand{\simpleListEnd}{\end{itemize}}
@@ -83,7 +83,7 @@
   % \vspace{-2pt}
   \item
     \begin{tabular*}{0.97\textwidth}[t]{ll@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textit{\small#5} & #2 \\
+      \textbf{#1} & \textsl{\small#5} & #2 \\
       \textit{\small#3} & \textit{} & \textit{\small#4} \\
     \end{tabular*}
     % \vspace{-7pt}

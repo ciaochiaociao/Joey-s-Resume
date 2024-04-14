@@ -18,6 +18,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{phonenumbers}
 \usepackage{fontawesome5}
+\usepackage{cleveref}
 \usepackage{resume}
 \input{glyphtounicode}  % chktex 27
 
@@ -30,21 +31,21 @@
   \input{sections/title.tex}
 
   %-----------EDUCATION-----------
-  \section{Education}
+  \section{{\small\faSchool}~Education}
     \resumeSubHeadingListStart{}
       \input{sections/edu1-nu.tex}
       \input{sections/edu2-csu.tex}
     \resumeSubHeadingListEnd{}
 
   %-----------EXPERIENCE-----------
-  \section{Experience}
+  \section{{\small\faBriefcase}~Experience}
     \resumeSubHeadingListStart{}
       \input{sections/exp1-ml.tex}
       % \input{sections/exp2-luye-goatai.tex}
     \resumeSubHeadingListEnd{}
 
   %-----------PROJECTS-------------
-  \section{Projects}
+  \section{{\small\faLaptopCode}~Projects}
     \resumeSubHeadingListStart{}
       \input{sections/proj1-savor.tex}
       \input{sections/proj4-carpanion.tex}
@@ -53,15 +54,15 @@
     \resumeSubHeadingListEnd{}
 
   %-----------SKILLS---------------
-  \section{Skills and Knowledge}
+  \section{{\small\faTools}~Skills and Knowledge}
     \input{sections/skills.tex}
 
   %-----------PUBLICATION----------
-  \section{Publications}
+  \section{{\small\faBook}~Publications}
     \input{sections/pub.tex}
 
   %-----------HONORS---------------
-  \section{Honors}
+  \section{{\small\faTrophy}~Honors}
     \input{sections/honors.tex}
 
 \end{document}
