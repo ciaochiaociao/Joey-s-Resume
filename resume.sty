@@ -46,7 +46,7 @@
 % Sections formatting
 \titleformat{\section}{\vspace{-3pt}\scshape\raggedright\large}{}{0em}{}
   [\color{black}\titlerule\vspace{-1pt plus 2pt minus 4pt}]
-\titlespacing{\section}{0pt}{-3pt}{6pt}
+\titlespacing{\section}{0pt}{-3pt plus 10pt}{6pt plus 10pt}
 
 % 1st-level itemize: resumeSubHeadingList, alphabetList, arabicList, bulletedList, simpleList
 \setlist[itemize]{itemsep=-4pt, leftmargin=0.20in}
@@ -82,7 +82,7 @@
 \newcommand{\resumeSubheadingII}[5]{
   % \vspace{-2pt}
   \item
-    \begin{tabular*}{0.97\textwidth}[t]{ll@{\extracolsep{\fill}}r}
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}l@{\extracolsep{\fill}}r}
       \textbf{#1} & \textsl{\small#5} & #2 \\
       \textit{\small#3} & \textit{} & \textit{\small#4} \\
     \end{tabular*}
