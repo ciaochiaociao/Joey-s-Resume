@@ -1,5 +1,5 @@
 *.synctex.gz
-*.pdf
+# *.pdf
 *.dvi
 *.out
 *.log
