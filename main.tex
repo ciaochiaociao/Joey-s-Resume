@@ -22,6 +22,39 @@
 \usepackage{resume}
 \input{glyphtounicode}  % chktex 27
 
+%%%%%% Flags %%%%%%
+\newif\ifML  % Machine Learning
+\newif\ifCV  % Computer Vision
+\newif\ifNLP  % Natural Language Processing
+\newif\ifRL  % Reinforcement Learning
+\newif\ifFrontend  % Frontend Development
+\newif\ifBackend  % Backend Development
+\newif\ifLowLevel  % Low-Level Development
+\newif\ifHardware  % Hardware Development
+\newif\ifSoftHard  % Software and Hardware Development
+
+% Add these lines
+\ifdefined\ML \MLtrue \fi
+\ifdefined\CV \CVtrue \fi
+\ifdefined\NLP \NLPtrue \fi
+\ifdefined\RL \RLtrue \fi
+\ifdefined\Frontend \Frontendtrue \fi
+\ifdefined\Backend \Backendtrue \fi
+\ifdefined\LowLevel \LowLeveltrue \fi
+\ifdefined\Hardware \Hardwaretrue \fi
+\ifdefined\SoftHard \SoftHardtrue \fi
+
+\ifML
+ \CVtrue
+ \NLPtrue
+ \RLtrue
+\fi
+
+\ifSoftHard
+  \LowLeveltrue
+  \Hardwaretrue
+\fi
+
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
