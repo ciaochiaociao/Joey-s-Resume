@@ -1,7 +1,29 @@
-\resumeSubheading{Software Engineer and Machine Learning Intern (Ongoing)}{Irvine, CA}
+\resumeSubheading{Software Engineer and Machine Learning Intern}{Irvine, CA}
 {Himax Imaging Corp.}{Jun. 2024~--~Sep. 2024}
   \resumeItemListStart{}
-    % face expression recognition, emotion detection for AI PC.
-    \resumeItem{Developing an low-consumption \textbf{compressed} joint \textbf{face expression, emotion and posture recognition} and \textbf{object detection} model and burning on an \textbf{endpoint AI device} based on \textbf{MobileNet} and \textbf{YOLOv8} with \textbf{Vela} and \textbf{TFLite}.}
-    \resumeItem{Developing an \textbf{LLM}-powered \textbf{Windows Desktop App} that integrates with \textbf{the edge device and operating system} on AIPC by \textbf{ElectronJS} and \textbf{C\texttt{++}/C\texttt{\#}} with \textbf{microcontroller} library and \textbf{Qt GUI framework}.}
+    \ifCV
+      % face expression recognition, emotion detection for AI PC.
+      \resumeItem{Developing an low-consumption \textbf{compressed} unified \textbf{emotion, focus recognition, body detection, face expression} model, and burned to an \textbf{endpoint AI device} based on \textbf{YOLO} with \textbf{TFLite} and \textbf{Vela}.}
+    \fi
+
+    \ifML  % model compression and optimization
+      \resumeItem{Utilized \textbf{Model Pruning}, \textbf{Quantization}, and \textbf{Quantization-aware Training} to obtain a compression ratio of 46\% (the lower the better).}
+    \fi
+
+    \ifNLP
+      \resumeItem{Implemented Task Automation with Natural Language Commands by a fine-tuned \textbf{LLM} and \textbf{Text-to-Speech} and \textbf{Speech-to-Text} for AIPC.}
+    \fi
+    
+    \ifFrontend
+      \resumeItem{Developed an \textbf{LLM}-powered \textbf{Windows Desktop App} that integrates with \textbf{the edge device and operating system} on AIPC by \textbf{ElectronJS}, \textbf{ReactJS}, and \textbf{C\texttt{++}/C\texttt{\#}} with \textbf{microcontroller} library and \textbf{Qt GUI framework}.}
+    \fi
+
+    \ifBackend
+      \resumeItem{Developed a \textbf{RESTful API} for the \textbf{AI PC} by \textbf{Django} and \textbf{Django REST framework} with \textbf{PostgreSQL}.}
+    \fi
+
+    \ifLowLevel
+      \resumeItem{Developed a library to communicate with the \textbf{microcontroller} FT4222 driver.}
+      \resumeItem{Integrated \textbf{Websocket}, \textbf{Shared Memory}, and \textbf{Named Pipe} for \textbf{inter-process communication} among \textbf{microcontroller}, \textbf{host PC}, and the application.}
+    \fi
   \resumeItemListEnd{}
