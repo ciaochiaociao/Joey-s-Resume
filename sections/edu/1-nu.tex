@@ -1,8 +1,16 @@
 \resumeSubheadingII{Northwestern University}{Evanston, IL}
 {Master of Science in Computer Science}{Since Sep. 2023}{GPA\@: 3.88/4.0}
 \resumeItemListStart{label=\tiny\faBookReader,leftmargin=2em}
-    \resumeItem{\input{sections/edu/1-nu_courses-swe.tex}}
-    % \resumeItem{\input{sections/edu/1-nu_courses-cv.tex}}
-    \resumeItem{\textbf{Financial Large Language Models (LLMs)} with \textbf{Reinforcement Learning with Stock Prices}}
+    \ifSWE
+        \resumeItem{\textbf{Deep Reinforcement Learning}, \textbf{Scalable Software Architecture}, \textbf{Operating Systems}, \textbf{Computer Networks}, Programming Languages (Compiler/Interpreter/Garbage Collector), Decentralization \& Blockchain.}
+    \fi
+    \ifML
+        \resumeItem{Thesis: ``Scaling Law for Deep Learning'' supervised by \href{https://scholar.google.com/citations?user=XaFT1o4AAAAJ}{Prof. Han Liu}.}
+        \resumeItem{Project: ``Understanding User Challenges in Prototyping with Large Language Models'' supervised by \href{http://users.eecs.northwestern.edu/~hq/}{Prof. Haoqi Zhang}.}
+        \resumeItem{ML: Minimax, Bayesian Learning, Causal Inference, Decision Tree, Logistic Regression, EM Algorithm, Naive Bayes, Knowledge Representation and Reasoning, Deep Reinforcement Learning.}
+        \resumeItem{DL: Quantization, LoRA, Retrieval-Augmented Generation, Diffusion Model, Linear RNN (Mamba), Transformer with RLHF, Mixture of Experts.}
+        \resumeItem{NLP: Financial LLMs and FinGPT.}
+        \resumeItem{CV/Graphics: Color Constancy, In-Pixel/On-Sensor Computation, Coded Aperture, Lensless Imaging.}
+    \fi
 \resumeItemListEnd{}
 

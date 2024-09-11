@@ -1,6 +1,13 @@
 \simpleListStart{}
+  % \ifML
+    % \titledItem{Other Programming Languages}{C/C++, Java, Rust, SPARQL, LaTeX.}  % \titledItem{DL/LLM}{Mamba, Diffusion Model, Prompt Engineering, Instruction Fine-tuning (IFT).}
+    % \titledItem{MLOps}{TFlite, Docker, slurm, Weights and Biases, Data Version Control (DVC).}
+  % \fi
   \titledItem{Other Programming Languages}{Java, Rust, PHP, Lisp/Racket, FORTRAN, SQL, SPARQL, LaTeX.}
-  % \titledItem{DL/LLM}{Mamba, Diffusion Model, Prompt Engineering, Instruction Fine-tuning (IFT).}
-  \titledItem{DevOps/MLOps}{Docker-Compose, Conda, Linux shell/fish/zsh, Windows PowerShell, sed, awk, vim, GitHub Action.}
-  % \titledItem{WebDev/Database}{ReactJS, ExpressJS, Django, MongoDB, PostgreSQL, Redis, Firebase, WikiData, Neo4j.} %2NM, 3NM.
+  \ifDevOps
+    \titledItem{DevOps/MLOps}{Docker-Compose, Conda, Linux shell/fish/zsh, Windows PowerShell, tmux, sed, awk, vim, GitHub Action.}
+  \fi
+  \ifWebDev
+    \titledItem{WebDev/Database}{ReactJS, ExpressJS, Django, MongoDB, PostgreSQL, Redis, Firebase, WikiData, Neo4j.} %2NM, 3NM.
+  \fi
 \simpleListEnd{}

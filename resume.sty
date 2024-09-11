@@ -34,27 +34,27 @@
 \raggedright{}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-.7in}
-\addtolength{\evensidemargin}{-.6in}
-\addtolength{\textwidth}{1.3in}
-\addtolength{\topmargin}{-.7in}
+\addtolength{\oddsidemargin}{-.5in}
+\addtolength{\evensidemargin}{-.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.5in}
 % \addtolength{\bottommargin}{-.6in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textheight}{0.8in}
 
 \setlength{\tabcolsep}{0in}
 
 % Sections formatting
-\titleformat{\section}{\vspace{-3pt}\scshape\raggedright\large}{}{0em}{}
-  [\color{black}\titlerule\vspace{-1pt plus 2pt minus 4pt}]
-\titlespacing{\section}{0pt}{-3pt plus 10pt}{6pt plus 10pt}
+\titleformat{\section}{\vspace{-1pt}\scshape\raggedright\large}{}{0em}{}
+  [\color{black}\titlerule\vspace{1pt}]
+\titlespacing{\section}{0pt}{2pt plus 4pt}{4pt plus 2pt}
 
 % 1st-level itemize: resumeSubHeadingList, alphabetList, arabicList, bulletedList, simpleList
-\setlist[itemize]{itemsep=-4pt, leftmargin=0.20in}
-\setlist[enumerate]{itemsep=-4pt}
+\setlist[itemize]{itemsep=-2pt, leftmargin=0.15in}
+\setlist[enumerate]{itemsep=-2pt}
 % 2nd-level itemize: resumeItemList
-\setlist[itemize,2]{before=\vspace{-7pt}\scriptsize, after=\vspace{-3pt}, itemsep=0pt}
+\setlist[itemize,2]{before=\vspace{-5pt}\small, after=\vspace{-1pt}, itemsep=0pt}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.1in, label=, itemsep=-5pt, before=]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.05in, label=, itemsep=-3pt, before=]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}[1]{\begin{itemize}[#1]}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
@@ -74,7 +74,7 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}
+    \end{tabular*}\vspace{1pt}
     % \vspace{-7pt}
 }
 
@@ -108,7 +108,7 @@
 
 \renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeItem}[1]{\item\small{#1}\vspace{1pt}}
 \newcommand{\titledItem}[2]{\item\small{\textbf{#1}: #2}}
 \newcommand{\simpleItem}[1]{\item\small{#1}}
 

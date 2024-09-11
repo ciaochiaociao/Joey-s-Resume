@@ -1,13 +1,17 @@
-\resumeSubheading{Software Engineer and Machine Learning Intern}{Irvine, CA}
+\ifML
+  \resumeSubheading{Machine Learning Intern}{Irvine, CA}
 {Himax Imaging Corp.}{Jun. 2024~--~Sep. 2024}
+\else
+  \resumeSubheading{Software Engineer Intern}{Irvine, CA}
+\fi
   \resumeItemListStart{}
     \ifCV
       % face expression recognition, emotion detection for AI PC.
-      \resumeItem{Developing an low-consumption \textbf{compressed} unified \textbf{emotion, focus recognition, body detection, face expression} model, and burned to an \textbf{endpoint AI device} based on \textbf{YOLO} with \textbf{TFLite} and \textbf{Vela}.}
+      \resumeItem{Engineered a unified model for \textbf{Emotion, Attention, Body Detection, Face Expression} model based on \textbf{YOLO} with \textbf{TFLite} and \textbf{Vela}.}
     \fi
 
     \ifML  % model compression and optimization
-      \resumeItem{Utilized \textbf{Model Pruning}, \textbf{Quantization}, and \textbf{Quantization-aware Training} to obtain a compression ratio of 46\% (the lower the better).}
+      \resumeItem{Utilized \textbf{Model Pruning}, \textbf{Quantization}, and \textbf{Quantization-aware Training} to obtain a compression ratio of 46\% on an \textbf{endpoint AI device} (milliwatts).}
     \fi
 
     \ifNLP

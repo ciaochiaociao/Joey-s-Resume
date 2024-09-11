@@ -26,23 +26,26 @@
 \newif\ifML  % Machine Learning
 \newif\ifCV  % Computer Vision
 \newif\ifNLP  % Natural Language Processing
-\newif\ifRL  % Reinforcement Learning
 \newif\ifFrontend  % Frontend Development
 \newif\ifBackend  % Backend Development
-\newif\ifLowLevel  % Low-Level Development
-\newif\ifHardware  % Hardware Development
 \newif\ifSoftHard  % Software and Hardware Development
+\newif\ifSWE  % Software Engineer
 
-% Add these lines
 \ifdefined\ML \MLtrue \fi
 \ifdefined\CV \CVtrue \fi
 \ifdefined\NLP \NLPtrue \fi
 \ifdefined\RL \RLtrue \fi
 \ifdefined\Frontend \Frontendtrue \fi
 \ifdefined\Backend \Backendtrue \fi
-\ifdefined\LowLevel \LowLeveltrue \fi
-\ifdefined\Hardware \Hardwaretrue \fi
 \ifdefined\SoftHard \SoftHardtrue \fi
+
+% internal flags
+\newif\ifStartup  % Startup
+\newif\ifDevOps  % DevOps
+\newif\ifWebDev  % Web Development
+\newif\ifRL  % Reinforcement Learning
+\newif\ifLowLevel  % Low-Level Development
+\newif\ifHardware  % Hardware Development
 
 \ifML
  \CVtrue
@@ -55,8 +58,12 @@
   \Hardwaretrue
 \fi
 
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifSWE
+  \LowLeveltrue
+  \Backendtrue
+\fi
 
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -68,37 +75,53 @@
     \resumeSubHeadingListStart{}
       \input{sections/edu/1-nu.tex}
       % \input{sections/edu/2-csu.tex}
-      \input{sections/edu/34-ncku-ntu-ghent.tex}
+      \ifHardware
+        \input{sections/edu/34-ncku-ntu-ghent.tex}
+      \fi
     \resumeSubHeadingListEnd{}
 
   %-----------EXPERIENCE-----------
   \section[Expeirence]{{\small\faBriefcase}~Experience}
     \resumeSubHeadingListStart{}
       \input{sections/exp/6-ml-intern.tex}
-      \input{sections/exp/1-ml.tex}
+      \ifNLP
+        \input{sections/exp/1-as.tex}
+      \fi
       % \input{sections/exp/2-luye-goatai.tex}
     \resumeSubHeadingListEnd{}
 
   %-----------PROJECTS-------------
   \section[Projects]{{\small\faLaptopCode}~Projects}
     \resumeSubHeadingListStart{}
-      % \input{sections/proj/1-savor.tex}
-      \input{sections/proj/1-savor-virtualchef.tex}
+      \ifML
+        \input{sections/proj/14-deep-rl-stock-trading.tex}
+        \input{sections/proj/22-multidoc-analysis.tex}
+      \fi
+      \ifFrontend
+        % \input{sections/proj/1-savor.tex}
+        % \input{sections/proj/2-virtualchef.tex}
+        \input{sections/proj/1-savor-virtualchef.tex}
+        % \input{sections/proj/3-shop.tex}
+        \input{sections/proj/4-carpanion.tex}
+      \fi
+      \ifHardware
+        \input{sections/proj/6-handwriting-robot.tex}
+      \fi
       % \input{sections/proj/10-3d-display.tex}
       % \input{sections/proj/9-autostereogram.tex}
-      \input{sections/proj/4-carpanion.tex}
-      \input{sections/proj/6-handwriting-robot.tex}
-      % \input{sections/proj/2-virtualchef.tex}
-      % \input{sections/proj/3-shop.tex}
     \resumeSubHeadingListEnd{}
 
   %-----------SKILLS---------------
-  \section[Skills and Knowledge]{{\small\faTools}~Skills and Knowledge}
-    \input{sections/skills.tex}
-
+  \ifML
+  \else
+    \section[Skills and Knowledge]{{\small\faTools}~Skills and Knowledge}
+      \input{sections/skills.tex}
+  \fi
   %-----------PUBLICATION----------
-  \section[Publications]{{\small\faBook}~Publications}
+  \ifNLP
+    \section[Publications]{{\small\faBook}~Publications}
     \input{sections/pub.tex}
+  \fi
 
   %-----------HONORS---------------
   \section[Honors]{{\small\faTrophy}~Honors}
