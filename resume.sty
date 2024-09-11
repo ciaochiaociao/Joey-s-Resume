@@ -37,35 +37,40 @@
 \addtolength{\oddsidemargin}{-.5in}
 \addtolength{\evensidemargin}{-.5in}
 \addtolength{\textwidth}{1.0in}
-\addtolength{\topmargin}{-.5in}
-% \addtolength{\bottommargin}{-.6in}
-\addtolength{\textheight}{0.8in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}  % Add to Text Area Height
 
-\setlength{\tabcolsep}{0in}
+\setlength{\tabcolsep}{0in}  % Adjusts the space between columns in a table
 
 % Sections formatting
-\titleformat{\section}{\vspace{-1pt}\scshape\raggedright\large}{}{0em}{}
-  [\color{black}\titlerule\vspace{1pt}]
-\titlespacing{\section}{0pt}{2pt plus 4pt}{4pt plus 2pt}
+\titleformat{\section}{\vspace{-2pt minus 4pt}\scshape\raggedright\large}{}{0em}{}
+  [\color{black}\titlerule\vspace{1pt}]  % \titleformat{command}{format}{label}{sep}{before-code}[after-code]
 
+\titlespacing{\section}{0pt}{2pt plus 4pt minus 6pt}{4pt plus 2pt minus 2pt}  % adjust spacing as needed: 1st value is left, 2nd is top, 3rd is bottom  
+
+% list settings: leftmargin, topsep, parsep (multi-paragraph separation), before, after, itemsep
 % 1st-level itemize: resumeSubHeadingList, alphabetList, arabicList, bulletedList, simpleList
-\setlist[itemize]{itemsep=-2pt, leftmargin=0.15in}
+\setlist[itemize]{leftmargin=0.15in, itemsep=-2pt, topsep=3pt, parsep=2pt}
 \setlist[enumerate]{itemsep=-2pt}
 % 2nd-level itemize: resumeItemList
-\setlist[itemize,2]{before=\vspace{-5pt}\small, after=\vspace{-1pt}, itemsep=0pt}
+\setlist[itemize,2]{leftmargin=0.3in, before=\vspace{-5pt}\small, after=\vspace{-1pt}, itemsep=0pt}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.05in, label=, itemsep=-3pt, before=]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.05in, itemsep=-3pt, label=, before=]}  % before= is used to remove the default topsep, and label= is used to remove the default label
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}[1]{\begin{itemize}[#1]}
+
+%% modularized list commands (customizable)
+\newcommand{\resumeItemListStart}[1][]{\begin{itemize}[leftmargin=2em, #1]}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\bulletedListStart}[1][]{\begin{itemize}[leftmargin=2em, #1]}
+\newcommand{\bulletedListEnd}{\end{itemize}}
+\newcommand{\simpleListStart}[1][0.15in]{\begin{itemize}[leftmargin=#1, label={}]}  % like resumeItemListStart but customizable leftmargin
+\newcommand{\simpleListEnd}{\end{itemize}}
+
+%% 
 \newcommand{\arabicListStart}{\begin{enumerate}[label={\textbf{[\arabic*]}}]}
 \newcommand{\arabicListEnd}{\end{enumerate}}
 \newcommand{\alphabetListStart}{\begin{enumerate}[label={\textbf{[\alph*]}}]}
 \newcommand{\alphabetListEnd}{\end{enumerate}}
-\newcommand{\bulletedListStart}[1][0.3in]{\begin{itemize}[#1]}
-\newcommand{\bulletedListEnd}{\end{itemize}}
-\newcommand{\simpleListStart}[1][0.15in]{\begin{itemize}[leftmargin=#1, label={}]}
-\newcommand{\simpleListEnd}{\end{itemize}}
 
 
 \newcommand{\resumeSubheading}[4]{
