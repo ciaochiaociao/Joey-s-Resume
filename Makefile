@@ -32,26 +32,28 @@ endif
 # Base filename
 BASE = main
 
+PREFIX = Chiao-Wei_Hsu
+
 # Define resume versions
 all: ML Frontend Backend SWE SH full
 
 ML:
-	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=resume-ML -usepretex="\def\ML{}" $(BASE).tex
+	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=$(PREFIX)-ML -usepretex="\def\ML{}" $(BASE).tex
 
 Frontend:
-	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=resume-Frontend -usepretex="\def\Frontend{}" $(BASE).tex
+	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=$(PREFIX)-Frontend -usepretex="\def\Frontend{}" $(BASE).tex
 
 Backend:
-	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=resume-Backend -usepretex="\def\Backend{}" $(BASE).tex
+	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=$(PREFIX)-Backend -usepretex="\def\Backend{}" $(BASE).tex
 
 SWE:
-	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=resume-SWE -usepretex="\def\SWE{}" $(BASE).tex
+	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=$(PREFIX)-SWE -usepretex="\def\SWE{}" $(BASE).tex
 
 SH:
-	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=resume-SH -usepretex="\def\SoftHard{}" $(BASE).tex
+	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=$(PREFIX)-SH -usepretex="\def\SoftHard{}" $(BASE).tex
 
 full:
-	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=resume-Full -usepretex="\def\ML{}\def\Frontend{}\def\Backend{}\def\SoftHard{}" $(BASE).tex
+	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=$(PREFIX)-Full -usepretex="\def\ML{}\def\Frontend{}\def\Backend{}\def\SoftHard{}" $(BASE).tex
 
 # Clean up auxiliary files
 clean:
