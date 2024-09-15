@@ -58,7 +58,7 @@ full:
 # Clean up auxiliary files
 clean:
 	$(LATEXMK) -C
-	del *.aux *.log *.out *.pdf *.fls *.fdb_latexmk
+	del *.aux *.log *.out *.pdf *.fls *.fdb_latexmk *.synctex.gz
 
 # Phony targets
 .PHONY: all ml frontend backend software_hardware full clean

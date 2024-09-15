@@ -32,6 +32,7 @@
 \newif\ifSWE  % Software Engineer
 
 \ifdefined\ML \MLtrue \fi
+\ifdefined\SWE \SWEtrue \fi
 \ifdefined\CV \CVtrue \fi
 \ifdefined\NLP \NLPtrue \fi
 \ifdefined\RL \RLtrue \fi
@@ -61,7 +62,18 @@
 \ifSWE
   \LowLeveltrue
   \Backendtrue
+  \WebDevtrue
+  \Startuptrue
 \fi
+
+\ifFrontend
+  \WebDevtrue
+\fi
+
+\ifBackend
+  \WebDevtrue
+\fi
+
 
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -100,10 +112,13 @@
       \ifFrontend
         % \input{sections/proj/1-savor.tex}
         % \input{sections/proj/2-virtualchef.tex}
-        \input{sections/proj/1-savor-virtualchef.tex}
         % \input{sections/proj/3-shop.tex}
+      \fi
+      \ifWebDev
+        \input{sections/proj/1-savor-virtualchef.tex}
         \input{sections/proj/4-carpanion.tex}
       \fi
+
       \ifHardware
         \input{sections/proj/6-handwriting-robot.tex}
       \fi
