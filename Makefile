@@ -1,8 +1,6 @@
 # Makefile for resume versions
 
 # Compiler settings
-LATEXMK = latexmk
-
 MODE ?= DEV
 
 # Interaction modes:
@@ -38,26 +36,26 @@ PREFIX = Chiao-Wei_Hsu
 all: ML Frontend Backend SWE SH full
 
 ML:
-	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=$(PREFIX)-ML -usepretex="\def\ML{}" $(BASE).tex
+	latexmk $(LATEXMK_FLAGS) -jobname=$(PREFIX)-ML -usepretex="\def\ML{}" $(BASE).tex
 
 Frontend:
-	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=$(PREFIX)-Frontend -usepretex="\def\Frontend{}" $(BASE).tex
+	latexmk $(LATEXMK_FLAGS) -jobname=$(PREFIX)-Frontend -usepretex="\def\Frontend{}" $(BASE).tex
 
 Backend:
-	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=$(PREFIX)-Backend -usepretex="\def\Backend{}" $(BASE).tex
+	latexmk $(LATEXMK_FLAGS) -jobname=$(PREFIX)-Backend -usepretex="\def\Backend{}" $(BASE).tex
 
 SWE:
-	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=$(PREFIX)-SWE -usepretex="\def\SWE{}" $(BASE).tex
+	latexmk $(LATEXMK_FLAGS) -jobname=$(PREFIX)-SWE -usepretex="\def\SWE{}" $(BASE).tex
 
 SH:
-	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=$(PREFIX)-SH -usepretex="\def\SoftHard{}" $(BASE).tex
+	latexmk $(LATEXMK_FLAGS) -jobname=$(PREFIX)-SH -usepretex="\def\SoftHard{}" $(BASE).tex
 
 full:
-	$(LATEXMK) $(LATEXMK_FLAGS) -jobname=$(PREFIX)-Full -usepretex="\def\ML{}\def\Frontend{}\def\Backend{}\def\SoftHard{}" $(BASE).tex
+	latexmk $(LATEXMK_FLAGS) -jobname=$(PREFIX)-Full -usepretex="\def\ML{}\def\Frontend{}\def\Backend{}\def\SoftHard{}" $(BASE).tex
 
 # Clean up auxiliary files
 clean:
-	$(LATEXMK) -C
+	latexmk -C
 	del *.aux *.log *.out *.pdf *.fls *.fdb_latexmk *.synctex.gz
 
 # Phony targets

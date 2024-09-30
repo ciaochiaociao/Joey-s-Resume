@@ -1,10 +1,26 @@
-\resumeSubheading{Machine Learning Engineer (Research)}{Taiwan}
+\ifML
+  \resumeSubheading{Machine Learning Engineer (Research)}{Taiwan}
 {Academia Sinica}{Oct. 2018~--~Dec. 2022}
+\else
+  \resumeSubheading{Software Engineer}{Taiwan}
+  {Academia Sinica}{Oct. 2018~--~Dec. 2022}
+\fi
+
   \resumeItemListStart
-    \resumeItem{Engineered a \textbf{Knowledge}-driven \textbf{Multi-Modal QA System} integrating \textbf{vision, speech, and text} data, advancing capabilities in cross-modal information processing~\ref{pub:qa}.}
-    \resumeItem{Enhanced \textbf{state-of-the-art} performance by 4\% on the \textbf{Named Entity Recognition (NER)} task through strategic \textbf{fine-tuning of Transformers}, applying \textbf{Multi-Task} and \textbf{Incremental Learning} techniques, and leveraging \textbf{Data Augmentation}~\ref{pub:recovery}\ref{pub:globalner}.}
+    
+    \ifLowLevel
+      \resumeItem{\href{https://pypi.org/project/ner-error-analysis/}{nlds {\tiny\faLink}}: Developed a python library of natural language data structure with \textbf{Design Patterns}---Composite, Factory, Template, Command, Facade, Adapter, Delegate, Builder, Strategy, Iterator, Dependency Injection, and Meta Class.}
+    \fi
+
+    \ifSWE
+      \resumeItem{Engineered a \textbf{Knowledge}-driven \textbf{Multi-Modal QA System} integrating \textbf{vision, speech, and text} data, advancing capabilities in cross-modal information processing.}
+      \resumeItem{Developed a Person-Company Profile Generation System with \textbf{Django}, \textbf{MySQL Database}, and \textbf{typical Natural Language Processing} pipelines.}
+    \fi
+
     \ifML
-      \resumeItem{Designed and implemented a \textbf{Hierarchical Multi-Head Multi-Layer Attention} mechanism from the ground up, enhancing model interpretability and performance.}
+      \resumeItem{Engineered a \textbf{Knowledge}-driven \textbf{Multi-Modal QA System} integrating \textbf{vision, speech, and text} data, advancing capabilities in cross-modal information processing~\ref{pub:qa}.}
+      \resumeItem{Enhanced \textbf{state-of-the-art} performance by 4\% on the \textbf{Named Entity Recognition (NER)} task through strategic \textbf{fine-tuning of Transformers}, applying \textbf{Multi-Task} and \textbf{Incremental Learning} techniques, and leveraging \textbf{Data Augmentation}~\ref{pub:recovery}\ref{pub:globalner}.}
+      \resumeItem{Designed a \textbf{Hierarchical Multi-Head Multi-Layer Attention} mechanism from the ground up, enhancing model interpretability and performance.}
       \resumeItem{Implemented \textbf{Adaptive Boosting} for Ensemble Learning.}
     \fi
   \resumeItemListEnd

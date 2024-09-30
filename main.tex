@@ -85,6 +85,7 @@
   %-----------EDUCATION-----------
   \section[Education]{{\small\faSchool}~Education}
     \resumeSubHeadingListStart
+      \input{sections/edu/0-su.tex}
       \input{sections/edu/1-nu.tex}
       % \input{sections/edu/2-csu.tex}
       \ifHardware
@@ -96,9 +97,7 @@
   \section[Expeirence]{{\small\faBriefcase}~Experience}
     \resumeSubHeadingListStart
       \input{sections/exp/6-ml-intern.tex}
-      \ifNLP
-        \input{sections/exp/1-as.tex}
-      \fi
+      \input{sections/exp/1-as.tex}
       % \input{sections/exp/2-luye-goatai.tex}
     \resumeSubHeadingListEnd
 
@@ -114,6 +113,15 @@
         % \input{sections/proj/2-virtualchef.tex}
         % \input{sections/proj/3-shop.tex}
       \fi
+
+      \ifLowLevel
+        \input{sections/proj/15-blockchains-p2p.tex}
+        \input{sections/proj/8-interpreter-by-racket.tex}
+        % \input{sections/proj/7-ner-error-analysis-package(draft).tex}
+        % \input{sections/proj/5-heap-as-dict(draft).tex}
+        % others: nand2tetris, os
+      \fi
+
       \ifWebDev
         \input{sections/proj/1-savor-virtualchef.tex}
         \input{sections/proj/4-carpanion.tex}
