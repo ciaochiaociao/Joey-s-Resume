@@ -1,5 +1,16 @@
 # Makefile for resume versions
 
+# Platform-agnostic cleanup command
+# Checks the operating system environment variable to determine if the build is running
+# on Windows. This allows for conditional execution of commands specific to the Windows
+# platform (e.g., file deletion commands or path separators) versus Unix-like systems.
+ifeq ($(OS),Windows_NT)
+	@echo "Detected OS: $(OS). Using Windows-specific commands."
+    RM = del /Q
+else
+    RM = rm -f
+endif
+
 # Compiler settings
 MODE ?= DEV
 
@@ -56,7 +67,7 @@ full:
 # Clean up auxiliary files
 clean:
 	latexmk -C
-	rm *.aux *.log *.out *.pdf *.fls *.fdb_latexmk *.synctex.gz
+	-$(RM) *.aux *.log *.out *.pdf *.fls *.fdb_latexmk *.synctex.gz
 
 # Phony targets
 .PHONY: all ml frontend backend software_hardware full clean
