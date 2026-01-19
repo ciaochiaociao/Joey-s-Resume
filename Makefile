@@ -51,12 +51,12 @@ SH:
 	latexmk $(LATEXMK_FLAGS) -jobname=$(PREFIX)-SH -usepretex="\def\SoftHard{}" $(BASE).tex
 
 full:
-	latexmk $(LATEXMK_FLAGS) -jobname=$(PREFIX)-Full -usepretex="\def\ML{}\def\Frontend{}\def\Backend{}\def\SoftHard{}" $(BASE).tex
+	latexmk $(LATEXMK_FLAGS) -jobname=$(PREFIX)-Full -usepretex="\def\ML{}\def\Frontend{}\def\Backend{}\def\SoftHard{}\def\SWE{}" $(BASE).tex
 
 # Clean up auxiliary files
 clean:
 	latexmk -C
-	del *.aux *.log *.out *.pdf *.fls *.fdb_latexmk *.synctex.gz
+	rm *.aux *.log *.out *.pdf *.fls *.fdb_latexmk *.synctex.gz
 
 # Phony targets
 .PHONY: all ml frontend backend software_hardware full clean

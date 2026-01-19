@@ -47,6 +47,7 @@
 \newif\ifRL  % Reinforcement Learning
 \newif\ifLowLevel  % Low-Level Development
 \newif\ifHardware  % Hardware Development
+\newif\ifAcademic  % Academic Honors
 
 \ifML
  \CVtrue
@@ -64,6 +65,7 @@
   \Backendtrue
   \WebDevtrue
   \Startuptrue
+  \Academictrue
 \fi
 
 \ifFrontend
@@ -82,6 +84,25 @@
   %----------HEADING----------
   \input{sections/title.tex}
 
+  %-----------EXPERIENCE-----------
+  \section[Expeirence]{{\small\faBriefcase}~Experience}
+    \resumeSubHeadingListStart
+      \input{sections/exp/7-tesla.tex}
+      \input{sections/exp/6-ml-intern.tex}
+      \input{sections/exp/1-as.tex}
+      % \input{sections/exp/2-luye-goatai.tex}
+    \resumeSubHeadingListEnd
+
+  %-----------HONORS---------------
+  \section[Honors]{{\small\faTrophy}~Honors}
+    \input{sections/honors.tex}
+
+  %-----------PUBLICATION----------
+  \ifNLP
+    \section[Publications]{{\small\faBook}~Publications}
+    \input{sections/pub.tex}
+  \fi
+
   %-----------EDUCATION-----------
   \section[Education]{{\small\faSchool}~Education}
     \resumeSubHeadingListStart
@@ -91,14 +112,6 @@
       \ifHardware
         \input{sections/edu/34-ncku-ntu-ghent.tex}
       \fi
-    \resumeSubHeadingListEnd
-
-  %-----------EXPERIENCE-----------
-  \section[Expeirence]{{\small\faBriefcase}~Experience}
-    \resumeSubHeadingListStart
-      \input{sections/exp/6-ml-intern.tex}
-      \input{sections/exp/1-as.tex}
-      % \input{sections/exp/2-luye-goatai.tex}
     \resumeSubHeadingListEnd
 
   %-----------PROJECTS-------------
@@ -140,14 +153,5 @@
     \section[Skills and Knowledge]{{\small\faTools}~Skills and Knowledge}
       \input{sections/skills.tex}
   \fi
-  %-----------PUBLICATION----------
-  \ifNLP
-    \section[Publications]{{\small\faBook}~Publications}
-    \input{sections/pub.tex}
-  \fi
-
-  %-----------HONORS---------------
-  \section[Honors]{{\small\faTrophy}~Honors}
-    \input{sections/honors.tex}
 
 \end{document}
