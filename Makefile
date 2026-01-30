@@ -64,10 +64,13 @@ SH:
 full:
 	latexmk $(LATEXMK_FLAGS) -jobname=$(PREFIX)-Full -usepretex="\def\ML{}\def\Frontend{}\def\Backend{}\def\SoftHard{}\def\SWE{}" $(BASE).tex
 
+perm:
+	latexmk $(LATEXMK_FLAGS) -jobname=$(PREFIX)-PERM -usepretex="\def\ML{}\def\Frontend{}\def\Backend{}\def\SoftHard{}\def\SWE{}" perm.tex
+
 # Clean up auxiliary files
 clean:
 	latexmk -C
-	-$(RM) *.aux *.log *.out *.pdf *.fls *.fdb_latexmk *.synctex.gz
+	-$(RM) *.aux *.log *.out *.fls *.fdb_latexmk *.synctex.gz
 
 # Phony targets
-.PHONY: all ml frontend backend software_hardware full clean
+.PHONY: all ml frontend backend software_hardware full clean perm
